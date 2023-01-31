@@ -1,3 +1,3 @@
-export interface ReactWithChildren {
+export interface FCWC {
   children?: React.ReactNode;
 }

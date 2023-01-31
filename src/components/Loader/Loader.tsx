@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react';
+import styles from './styles/Loader.module.css';
 
 interface LoaderProps {
-  color?: string;
+  secondary?: boolean;
 }
-const Loader: React.FC<LoaderProps> = ({ color = "white" }) => {
-  return <div className="loader" style={{ borderColor: color }} />;
+const Loader: React.FC<LoaderProps> = ({ secondary = false }) => {
+  console.log(secondary);
+  return <div className={secondary ? styles.loaderSecondary : styles.loader} />;
 };
 
 export default Loader;
